@@ -33,8 +33,30 @@ html{
 }
 
 body{
-    background: var(--main-background);
+    background-color: var(--main-background);
     color: var(--white);
+    position: relative;
+    z-index: -3;
+
+    &::before{
+        content: "";
+        height: 480px;
+        width: 100vw;
+        position: absolute;
+        background-color: var(--primary-background);
+        top: -30px;
+        z-index: -2;
+    }
+
+    &::after{
+        content: url(../asset/bg-curvy-mobile.svg);
+        // background: ;
+        position: absolute;
+        height: fit-content;
+        width: fit-content;
+        top: 320px;
+        z-index: -1;
+    }
 
     img{
         width: 100%;
@@ -100,6 +122,7 @@ body{
     }
 
     header .container{
+        // background-color: var(--primary-background);
         margin-top: 60px;
         display: flex;
         flex-direction: column;
@@ -249,7 +272,12 @@ body{
         }
     }
 
+    section.newsletter{
+        // background: ;
+        height: 200px;
+    }
     section.newsletter .container .newsletter-wrapper{
+        position: relative;
         padding: 40px 30px;
         display: flex;
         flex-direction: column;
@@ -277,10 +305,14 @@ body{
 
             input{
                 width: 100%;
-                padding: 15px;
+                padding: 15px 30px;
                 font-size: 12px;
                 background: var(--white);
                 border-radius: 50px;
+
+                &::placeholder{
+                    color: rgb(185, 184, 184);
+                }
             }
             button{
                 font-size: 14px;
@@ -291,6 +323,96 @@ body{
                 background: var(--blue);
                 color: var(--white);
                 width: 100%;
+            }
+        }
+    }
+
+    footer{
+        background: var(--footer-background);
+    }
+    footer .container{
+        padding-top: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .footer-logo{
+            width: 50%;
+        }
+
+        .footer-section{
+            .first{
+                display: flex;
+                gap: 20px;
+                img{
+                    margin-top: 5px;
+                    width: 15%;
+                    height: 15%;
+                }
+                span{
+                    font-size: 17px;
+                }
+            }
+            .second{
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+
+                .phone{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    margin-bottom: 15px;
+
+                    img{
+                        width: 5%;
+                        height: 5%;
+                    }
+                }
+            }
+
+            .third{
+                margin-top: 60px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                li{
+                    a{
+                        font-size: 17px;
+                    }
+                }
+            }
+
+            .forth{
+                margin-top: 60px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                li{
+                    a{
+                        font-size: 17px;
+                    }
+                }
+            }
+
+            .fifth{
+                margin: 60px 0 40px;
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+
+               
+                a{
+                    i{
+                        font-size: 15px;
+                        border: 1px solid var(--white);
+                        padding: 5px;
+                        border-radius: 50%;
+                    }
+                }
+                
             }
         }
     }
