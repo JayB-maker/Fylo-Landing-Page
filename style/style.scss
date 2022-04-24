@@ -205,4 +205,93 @@ body{
         }
         
     }
+
+    section.testimonial .container{
+        width: 80%;
+
+        img.quote{
+            width: 10%;
+        }
+
+        .card{
+            background: var(--testimonials-background);
+            padding: 25px 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+
+            span{
+                font-size: 11px;
+                line-height: 18px;
+            }
+
+            .author{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                img{
+                    width: 15%;
+                    border-radius: 50%;
+                }
+
+                .info{
+                    h6{
+                        font-size: 12px;
+                    }
+                    span{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    section.newsletter .container .newsletter-wrapper{
+        padding: 40px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+        background: var(--primary-background);
+        border-radius: 10px;
+        box-shadow: 3px 3px 20px black;
+
+        h2{
+            font-size: 20px;
+        }
+
+        span{
+            font-size: 14px;
+            line-height: 25px;
+        }
+
+        form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            input{
+                width: 100%;
+                padding: 15px;
+                font-size: 12px;
+                background: var(--white);
+                border-radius: 50px;
+            }
+            button{
+                font-size: 14px;
+                font-weight: 700;
+                padding: 15px;
+                border-radius: 50px;
+                font-family: 'Open Sans', sans-serif;
+                background: var(--blue);
+                color: var(--white);
+                width: 100%;
+            }
+        }
+    }
 }
