@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+:root{
+    --main-background: hsl(218, 28%, 13%);
+    --footer-background: hsl(216, 53%, 9%);
+    --testimonials-background: hsl(219, 30%, 18%);
+    --primary-background: hsl(217, 28%, 15%);
+    --cyan: hsl(176, 68%, 64%);
+    --blue: hsl(198, 60%, 50%);
+    --light-red: hsl(0, 100%, 63%);
+    --white: hsl(0, 0%, 100%);
+
+    --container-lg: 90%;
+    --container-sm: 90%;
+
+    --transition: transform 300ms ease-in-out;
+}
+
+body{
+    background: var(--main-background);
+    color: var(--white);
+
+    img{
+        width: 100%;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        font-family: 'Raleway', sans-serif;
+    }
+
+    p, span{
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    a{
+        color: white;
+        font-weight: 400;
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+    }
+
+    a.btn{
+        font-family: 'Open Sans', sans-serif;
+        color: var(--white);
+        background: var(--blue);
+        padding: 12px 70px;
+        border-radius: 30px;
+        font-size: 18px;
+        transition: var(--transition);
+
+        &:hover{
+            opacity: 80%;
+        }
+    }
+
+    .container{
+        width: var(--container-sm);
+        margin: 0 auto;
+    }
+
+    section{
+        width: 100%;
+        margin-top: 150px;
+    }
+
+    nav .container{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        place-content: space-between;
+
+        a img{
+            width: 50%;
+        }
+
+        .navigation{
+            display: flex;
+            gap: 14px;
+
+            a{
+                font-size: 13px;
+            }
+        }
+    }
+
+    header .container{
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+
+        img{
+            width: 95%;
+        }
+
+        .header-info{
+            text-align: center;
+
+            h1{
+                font-size: 27px;
+                font-weight: 700;
+                line-height: 40px;
+                margin-bottom: 20px;
+            }
+
+            p{
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 25px;
+                padding: 0 15px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    section.features .container{
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        article{
+            text-align: center;
+            align-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            img{
+                width: 20%;
+                margin-bottom: 20px;
+            }
+
+            h2{
+                font-size: 20px;
+            }
+            span{
+                font-size: 14px;
+                line-height: 25px;
+            }
+        }
+    }
+
+    section.productive .container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .productive-info{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+
+            img{
+                width: 95%;
+            }
+            h2{
+                font-size: 20px;
+            }
+            span{
+                font-size: 14px;
+                line-height: 25px;
+                padding: 0 8px;
+            }   
+        }
+
+        a{
+            padding: 0 8px;
+            margin-top: px;
+            color: var(--cyan);
+            margin-bottom: 20px;
+            position: relative;
+            transition: var(--transition);
+
+            &::after{
+                position: absolute;
+                content: "";
+                width: 148px;
+                height: 2px;
+                background-color: var(--cyan);
+                left: 8px;
+                bottom: -8px;
+            }
+
+            &:hover{
+                opacity: 90%;
+            }
+        }
+        
+    }
+}
