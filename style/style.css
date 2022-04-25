@@ -361,13 +361,8 @@ body section.newsletter .container .newsletter-wrapper span {
 
 body section.newsletter .container .newsletter-wrapper form {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: -ms-grid;
+  display: grid;
   gap: 20px;
 }
 
@@ -426,7 +421,16 @@ body footer .container .footer-logo {
   width: 50%;
 }
 
+body footer .container .footer-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (280px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 280px);
+  gap: 50px;
+}
+
 body footer .container .footer-section .first {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,7 +440,9 @@ body footer .container .footer-section .first {
 body footer .container .footer-section .first img {
   margin-top: 5px;
   width: 15%;
-  height: 15%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 body footer .container .footer-section .first span {
@@ -467,7 +473,9 @@ body footer .container .footer-section .second .phone {
 
 body footer .container .footer-section .second .phone img {
   width: 5%;
-  height: 5%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 body footer .container .footer-section .third {
@@ -503,14 +511,11 @@ body footer .container .footer-section .forth li a {
 }
 
 body footer .container .footer-section .fifth {
-  margin: 60px 0 40px;
+  margin: 60px 35px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  gap: 15px;
 }
 
 body footer .container .footer-section .fifth a i {
@@ -518,5 +523,83 @@ body footer .container .footer-section .fifth a i {
   border: 1px solid var(--white);
   padding: 5px;
   border-radius: 50%;
+}
+
+@media screen and (min-width: 700px) {
+  body .container {
+    width: 85%;
+  }
+  body nav .container ul.navigation {
+    gap: 25px;
+  }
+  body header .container .header-info, body header .container h1, body header .container p {
+    margin: 35px;
+  }
+  body section.features .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  body section.features .container article {
+    display: block;
+    height: 200px;
+    padding: 30px;
+  }
+  body section.features .container article img {
+    width: 15%;
+  }
+  body section.features .container article img.second {
+    margin-top: -15px;
+  }
+  body section.features .container article h2 {
+    font-size: 18px;
+  }
+  body section.features .container article span {
+    font-size: 12px;
+  }
+  section.testimonial .container {
+    width: 85%;
+  }
+  section.testimonial .container img.quote {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto 20px;
+  }
+  section.testimonial .container .cards-collection {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (300px)[auto-fill];
+        grid-template-columns: repeat(auto-fill, 300px);
+    gap: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.testimonial .container .cards-collection .card {
+    margin-bottom: 0;
+  }
+  section.newsletter .container .newsletter-wrapper {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  section.newsletter .container .newsletter-wrapper form {
+    -ms-grid-columns: 65% 35%;
+        grid-template-columns: 65% 35%;
+  }
+}
+
+footer .container .footer-logo img {
+  width: 60%;
+}
+
+footer .container .footer-section .third {
+  margin-left: 35px;
+}
+
+footer .container .footer-section .forth {
+  margin-left: 35px;
 }
 /*# sourceMappingURL=style.css.map */

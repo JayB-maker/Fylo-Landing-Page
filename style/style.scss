@@ -299,8 +299,7 @@ body{
 
         form{
             width: 100%;
-            display: flex;
-            flex-direction: column;
+            display: grid;
             gap: 20px;
 
             input{
@@ -341,13 +340,18 @@ body{
         }
 
         .footer-section{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 280px);
+            gap: 50px;
+
             .first{
+                width: 100%;
                 display: flex;
                 gap: 20px;
                 img{
                     margin-top: 5px;
                     width: 15%;
-                    height: 15%;
+                    height: fit-content;
                 }
                 span{
                     font-size: 17px;
@@ -366,7 +370,7 @@ body{
 
                     img{
                         width: 5%;
-                        height: 5%;
+                        height: fit-content;
                     }
                 }
             }
@@ -398,10 +402,9 @@ body{
             }
 
             .fifth{
-                margin: 60px 0 40px;
+                margin: 60px 35px 40px;
                 display: flex;
-                gap: 10px;
-                justify-content: center;
+                gap: 15px;
 
                
                 a{
@@ -414,6 +417,95 @@ body{
                 }
                 
             }
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    body{
+        .container{
+            width: 85%;
+        }
+        
+        nav .container{
+            ul.navigation{
+                gap: 25px;
+            }
+        }
+
+        header .container{
+            .header-info, h1, p{
+                margin: 35px;
+            }
+        }
+
+        section.features .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+           
+            article{
+                display: block;
+                height: 200px;
+                padding: 30px;
+                img{
+                    width: 15%;
+                }
+                img.second{
+                    margin-top: -15px;
+                }
+                h2{
+                    font-size: 18px;
+                }
+                span{
+                    font-size: 12px;
+                }
+            }
+        }
+
+        
+    }
+
+    section.testimonial .container{
+        width: 85%;
+
+        img.quote{
+            display: flex;
+            margin: 0 auto 20px;
+        }
+        .cards-collection{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 300px);
+            gap: 20px;
+            justify-content: center;
+
+            .card{
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+    section.newsletter .container .newsletter-wrapper{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        form{
+            grid-template-columns: 65% 35%;
+        }
+    }
+}
+
+footer .container{
+    .footer-logo{
+        img{
+        width: 60%;
+        }
+    }
+    .footer-section{
+        .third{
+            margin-left: 35px;
+        }
+        .forth{
+            margin-left: 35px;
         }
     }
 }
