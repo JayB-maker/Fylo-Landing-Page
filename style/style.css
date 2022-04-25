@@ -72,10 +72,16 @@ body p, body span {
 }
 
 body a {
-  color: white;
+  color: var(--white);
   font-weight: 400;
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+body a:hover {
+  color: var(--cyan);
 }
 
 body a.btn {
@@ -90,7 +96,7 @@ body a.btn {
 }
 
 body a.btn:hover {
-  opacity: 80%;
+  background: var(--cyan);
 }
 
 body .container {
@@ -249,13 +255,15 @@ body section.productive .container .productive-info span {
 }
 
 body section.productive .container a {
-  padding: 0 8px;
-  margin-top: px;
   color: var(--cyan);
   margin-bottom: 20px;
   position: relative;
   -webkit-transition: var(--transition);
   transition: var(--transition);
+}
+
+body section.productive .container a i {
+  margin-left: -7px;
 }
 
 body section.productive .container a::after {
@@ -264,12 +272,12 @@ body section.productive .container a::after {
   width: 148px;
   height: 2px;
   background-color: var(--cyan);
-  left: 8px;
+  left: 0;
   bottom: -8px;
 }
 
 body section.productive .container a:hover {
-  opacity: 90%;
+  color: white;
 }
 
 body section.testimonial .container {
@@ -397,6 +405,13 @@ body section.newsletter .container .newsletter-wrapper form button {
   background: var(--blue);
   color: var(--white);
   width: 100%;
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+body section.newsletter .container .newsletter-wrapper form button:hover {
+  background: var(--cyan);
 }
 
 body footer {
@@ -521,6 +536,13 @@ body footer .container .footer-section .fifth a i {
   border: 1px solid var(--white);
   padding: 5px;
   border-radius: 50%;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+body footer .container .footer-section .fifth a i:hover {
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
 }
 
 @media all and (min-width: 700px) {
@@ -617,13 +639,14 @@ footer .container .footer-section .forth {
     z-index: -1;
   }
   body nav .container a img {
-    width: 100%;
+    width: 70%;
   }
   body nav .container .navigation {
-    gap: 50px;
+    gap: 70px;
   }
   body nav .container .navigation a {
-    font-size: 25px;
+    font-size: 15px;
+    margin-right: 20px;
   }
   body header .container {
     margin-top: 100px;
@@ -735,10 +758,16 @@ footer .container .footer-section .forth {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 80px;
+    gap: 50px;
   }
   body footer .container .footer-section .first, body footer .container .footer-section .second, body footer .container .footer-section .third, body footer .container .footer-section .forth, body footer .container .footer-section .fifth {
     margin: 0;
+  }
+  body footer .container .footer-section .third, body footer .container .footer-section .forth {
+    width: 300px;
+  }
+  body footer .container .footer-section .second {
+    padding-right: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
