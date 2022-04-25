@@ -54,9 +54,7 @@ body::after {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100vw;
   top: 320px;
   z-index: -1;
 }
@@ -525,7 +523,7 @@ body footer .container .footer-section .fifth a i {
   border-radius: 50%;
 }
 
-@media screen and (min-width: 700px) {
+@media all and (min-width: 700px) {
   body .container {
     width: 85%;
   }
@@ -542,7 +540,6 @@ body footer .container .footer-section .fifth a i {
         grid-template-columns: 1fr 1fr;
   }
   body section.features .container article {
-    display: block;
     height: 200px;
     padding: 30px;
   }
@@ -601,5 +598,147 @@ footer .container .footer-section .third {
 
 footer .container .footer-section .forth {
   margin-left: 35px;
+}
+
+@media screen and (min-width: 1200px) {
+  body::before {
+    content: "";
+    height: 1220px;
+    width: 100vw;
+  }
+  body::after {
+    content: url(../asset/bg-curvy-desktop.svg);
+    position: absolute;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100vw;
+    top: 750px;
+    z-index: -1;
+  }
+  body nav .container a img {
+    width: 100%;
+  }
+  body nav .container .navigation {
+    gap: 50px;
+  }
+  body nav .container .navigation a {
+    font-size: 25px;
+  }
+  body header .container {
+    margin-top: 100px;
+  }
+  body header .container .header-info h1 {
+    font-size: 40px;
+    line-height: 60px;
+    padding: 0 100px;
+  }
+  body header .container .header-info p {
+    font-size: 18px;
+    line-height: 36px;
+    padding: 0 250px;
+    margin-bottom: 50px;
+  }
+  body section.features .container {
+    width: 55%;
+    gap: 70px;
+  }
+  body section.productive .container .productive-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 70px;
+  }
+  body section.productive .container .productive-info img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  body section.productive .container .productive-info .texts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  body section.productive .container .productive-info .texts .words h2 {
+    padding-right: 20%;
+    font-size: 38px;
+  }
+  body section.productive .container .productive-info .texts a {
+    margin: 0;
+    padding: 0;
+  }
+  body section.productive .container .productive-info .texts a span {
+    margin: 0;
+    padding: 0;
+  }
+  body section.productive .container .productive-info .texts a::after {
+    left: 0px;
+  }
+  body section.testimonial .container img.quote {
+    width: 5%;
+    margin: 0;
+  }
+  body section.testimonial .container .cards-collection {
+    -ms-grid-columns: (350px)[auto-fill];
+        grid-template-columns: repeat(auto-fill, 350px);
+    gap: 3.5%;
+    margin-top: -8px;
+  }
+  body section.testimonial .container .cards-collection .card {
+    padding: 35px;
+  }
+  body section.testimonial .container .cards-collection .card span {
+    font-size: 13px;
+    margin-top: 13px;
+    line-height: 25px;
+  }
+  body section.testimonial .container .cards-collection .card .author {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body section.testimonial .container .cards-collection .card .author img {
+    width: 10%;
+  }
+  body section.testimonial .container .cards-collection .card .author .info h6 {
+    margin-top: 5px;
+    font-size: 8px;
+    margin-bottom: -5px;
+  }
+  body section.testimonial .container .cards-collection .card .author .info span {
+    font-size: 6px;
+  }
+  body section.newsletter {
+    height: 150px;
+  }
+  body section.newsletter .container .newsletter-wrapper {
+    width: 65%;
+    padding: 50px 80px;
+  }
+  body footer .container {
+    padding-top: 180px;
+    padding-bottom: 180px;
+  }
+  body footer .container .footer-logo img {
+    width: 30%;
+  }
+  body footer .container .footer-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 80px;
+  }
+  body footer .container .footer-section .first, body footer .container .footer-section .second, body footer .container .footer-section .third, body footer .container .footer-section .forth, body footer .container .footer-section .fifth {
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

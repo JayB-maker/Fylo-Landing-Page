@@ -50,10 +50,9 @@ body{
 
     &::after{
         content: url(../asset/bg-curvy-mobile.svg);
-        // background: ;
         position: absolute;
         height: fit-content;
-        width: fit-content;
+        width: 100vw;
         top: 320px;
         z-index: -1;
     }
@@ -421,7 +420,7 @@ body{
     }
 }
 
-@media screen and (min-width: 700px) {
+@media all and (min-width: 700px) {
     body{
         .container{
             width: 85%;
@@ -444,7 +443,6 @@ body{
             grid-template-columns: 1fr 1fr;
            
             article{
-                display: block;
                 height: 200px;
                 padding: 30px;
                 img{
@@ -508,4 +506,161 @@ footer .container{
             margin-left: 35px;
         }
     }
+}
+
+@media screen and (min-width: 1200px) {
+    body{
+
+        &::before{
+            content: "";
+            height: 1220px;
+            width: 100vw;
+        }
+
+        &::after{
+            content: url(../asset/bg-curvy-desktop.svg);
+            position: absolute;
+            height: fit-content;
+            width: 100vw;
+            top: 750px;
+            z-index: -1;
+        }
+        nav .container{
+            a img{
+                width: 100%;
+            }
+            .navigation{
+                gap: 50px;
+    
+                a{
+                    font-size: 25px;
+                }
+            }
+        }
+        header .container{
+            margin-top: 100px;
+            
+            .header-info{
+                h1{
+                    font-size: 40px;
+                    line-height: 60px;
+                    padding: 0 100px;
+                }
+    
+                p{
+                    font-size: 18px;
+                    line-height: 36px;
+                    padding: 0 250px;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+
+        section.features .container{
+            width: 55%;
+            gap: 70px;
+        }
+
+        section.productive .container .productive-info{
+            flex-direction: row;
+            align-items: center;
+            gap: 70px;
+            img{
+                flex: 1;
+            }
+            .texts{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .words{
+                    h2{
+                        padding-right: 20%;
+                        font-size: 38px;
+                    }
+                }
+                a{
+                    margin: 0;
+                    padding: 0;
+                    span{
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    &::after{
+                        left: 0px;
+                    }
+                }
+            }
+        }
+
+        section.testimonial .container{
+            img.quote{
+                width: 5%;
+                margin: 0;
+            }
+
+            .cards-collection{
+                grid-template-columns: repeat(auto-fill, 350px);
+                gap: 3.5%;
+                margin-top: -8px;
+
+                .card{
+                    padding: 35px;
+                    span{
+                        font-size: 13px;
+                        margin-top: 13px;
+                        line-height: 25px;
+                    }
+                    .author{
+                        align-items: center;
+                        img{
+                            width: 10%;
+                        }
+                        .info{
+                            h6{
+                                margin-top: 5px;
+                                font-size: 8px;
+                                margin-bottom: -5px;
+                            }
+                            span{
+                                font-size: 6px;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+        section.newsletter{
+            height: 150px;
+        }
+        section.newsletter .container .newsletter-wrapper{
+            width: 65%;
+            padding: 50px 80px;
+        }
+
+        footer .container{
+            padding-top: 180px;
+            padding-bottom: 180px;
+
+            .footer-logo{
+                img{
+                width: 30%;
+                }
+            }
+            .footer-section{
+                display: flex;
+                gap: 80px;
+
+                .first, .second, .third, .forth, .fifth{
+                    margin: 0;
+                }
+                
+            }
+        }
+    }
+
+    
+
 }
